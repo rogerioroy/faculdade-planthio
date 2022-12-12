@@ -1,0 +1,32 @@
+import { ReactComponent as MainImage } from 'assets/images/main-image.svg';
+import ButtonIcon from 'components/ButtonIcon';
+import { Link } from 'react-router-dom';
+
+import './styles.css';
+
+const Home = () => {
+  return (
+    <div className="home-container">
+      <div className="base-card home-card">
+        <div className="home-content-container">
+          <div>
+            <h1>Consulte aqui o seu Catálogo</h1>
+            <p>
+              Obtenha um planejamento e potencialize o resultado das suas lavouras
+            </p>
+          </div>
+          <div>
+            <Link to="/products">
+              <ButtonIcon text="Inicie agora a sua busca" />
+            </Link>
+          </div>
+        </div>
+        <div className="home-image-container">
+          <MainImage />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

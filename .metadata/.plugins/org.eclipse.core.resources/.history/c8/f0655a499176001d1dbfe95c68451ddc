@@ -1,0 +1,18 @@
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Rogerio', 'Vasconcelos', 'rogerio@hotmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Joas', 'Joca', 'joas@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_OPERATOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+
+INSERT INTO tb_category (name, created_At) VALUES ('Máquinas', NOW());
+INSERT INTO tb_category (name, created_At) VALUES ('Sementes', NOW());
+
+INSERT INTO tb_product (name, price, date, description, img_url) VALUES ('Colheitadeiras de Grãos Série S', 111890.51, TIMESTAMP WITH TIME ZONE '2022-12-04T20:50:07.12345Z', 'A evolução continua com as colheitadeiras S700 Geração 2. Aprimoramos sua capacidade de automação para atender janelas de colheita cada vez mais curtas, o que vai te ajudar a reduzir o custo de operação com base na eficiência total da colheitadeira, coletando e analisando dados para tomar decisões agora e no futuro. ', 'https://raw.githubusercontent.com/rogerioroy/planthio-resourses/main/backend/img/img01.jpg');
+INSERT INTO tb_product (name, price, date, description, img_url) VALUES ('Colhedoras de Cana CH', 156890.5, TIMESTAMP WITH TIME ZONE '2022-11-01T20:50:07.12345Z', 'O Monitor de Colheita das colhedoras série CH, representa o que há de mais moderno em termos de tecnologia para a geração de mapas de produtividade e gerenciamento de impurezas. As informações coletadas possibilitam tomada de decisões de forma a melhorar a qualidade da cana colhida e reduzir os custos da operação. Da cabine, o operador monitora o total de toneladas colhidas de cada talhão, a performance da colhedora, a porcentagem de resíduos e o consumo de combustível por tonelada colhida. Com o JDLink™, os dados são transmitidos automaticamente e podem ser acessados diretamente no celular e no Operations Center, com base nesses dados mapas de produtividade e variabilidade no campo, pode-se adotar ajustes na operação e medidas adequadas de manejo, fertilização e até mesmo planejar as áreas de renovação do canavial.', 'https://raw.githubusercontent.com/rogerioroy/planthio-resourses/main/backend/ig/img02.jpg');
+	
+INSERT INTO tb_product_category (product_id, category_id) VALUES (1, 1);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (2, 1);
